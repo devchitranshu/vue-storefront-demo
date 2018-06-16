@@ -5,6 +5,7 @@ import config from 'config'
 // Core mixins
 import Composite from 'core/mixins/composite'
 import { currentStoreView } from '@vue-storefront/store/lib/multistore'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Checkout',
@@ -33,6 +34,11 @@ export default {
       },
       userId: null
     }
+  },
+  computed: {
+    ...mapState({
+      currentUser: state => state.user.current
+    })
   },
   beforeMount () {
     if (this.$store.state.cart.cartItems.length === 0) {
@@ -332,6 +338,9 @@ export default {
     },
     savePaymentDetails () {
       this.$store.dispatch('checkout/savePaymentDetails', this.payment)
+    },
+    gotoAccount () {
+      this.$bus.$emit('modal-show', 'modal-signup')
     }
   },
   metaInfo () {

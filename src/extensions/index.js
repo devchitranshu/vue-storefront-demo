@@ -7,6 +7,8 @@ export default [
   require('@vue-storefront/extension-mailchimp-subscribe/index.js'),
   require('@vue-storefront/extension-payment-backend-methods/index.js'),
   require('@vue-storefront/extension-payment-cash-on-delivery/index.js'),
+  require('@vue-storefront/extension-payment-paypal/index.js'),
+  require('@vue-storefront/extension-payment-creditcard/index.js'),
   require('@vue-storefront/extension-template/index.js'),
   require('vsf-payment-stripe/index.js')
 ]

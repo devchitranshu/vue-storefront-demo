@@ -171,7 +171,7 @@
     "mailchimp": {
       "endpoint": "http://localhost:8080/api/ext/mailchimp-subscribe/subscribe"
     },
-    "theme": "@vue-storefront/theme-default",
+    "theme": "@vue-storefront/thehourglass",
     "analytics": {
       "id": false
     },
